@@ -1,0 +1,8 @@
+{
+  "name": "Practis Manager Accounting Dashboard",
+  "description": "A comprehensive business advisory and accounting management platform with job tracking, client summaries, and real-time analytics.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

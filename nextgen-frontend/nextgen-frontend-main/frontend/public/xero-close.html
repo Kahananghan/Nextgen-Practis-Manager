@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Connecting...</title>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const error = params.get('error');
+    
+    if (error) {
+      // Show error for 3 seconds then close
+      document.write('<div style="text-align:center;padding:40px;font-family:sans-serif;"><h3 style="color:#e05252;">Connection Failed</h3><p style="color:#64748b;">' + error + '</p><p style="font-size:12px;color:#94a3b8;margin-top:20px;">Closing window...</p></div>');
+      setTimeout(() => window.close(), 3000);
+    } else {
+      // Success - close immediately
+      window.close();
+      // Fallback message
+      setTimeout(() => {
+        document.body.innerHTML = '<div style="text-align:center;padding:40px;font-family:sans-serif;"><p style="color:#1d9e75;">Connected successfully!</p><p style="font-size:12px;color:#94a3b8;">You can close this window</p></div>';
+      }, 100);
+    }
+  </script>
+</head>
+<body>
+  <div style="text-align:center;padding:40px;font-family:sans-serif;">
+    <p>Completing connection...</p>
+  </div>
+</body>
+</html>
